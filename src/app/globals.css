@@ -21,7 +21,7 @@
     @apply hover:text-rose-500;
   }
   .form {
-    @apply w-[500px] text-center rounded-sm;
+    @apply w-[500px] text-center rounded-lg;
   }
   .form-danger {
     @apply text-red-500 border border-red-500;
