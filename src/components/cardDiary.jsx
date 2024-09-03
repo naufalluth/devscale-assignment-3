@@ -17,10 +17,10 @@ export const CardDiary = async () => {
     console.log({ data });
 
     return (
-        <div className="grid grid-cols-3 gap-4 justify-center items-center   ">
+        <div className="grid grid-cols-3 gap-4 place-content-center">
             {data.map((diary) => {
                 return (
-                    <div key={diary._id} className="card space-y-4">
+                    <div key={diary._id} className="card space-y-4 p-3">
                         <h4>{diary.date}</h4>
                         <h3 className="font-semibold text-lg">{diary.title}</h3>
                         <p>{diary.content}</p>

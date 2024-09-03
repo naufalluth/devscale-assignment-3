@@ -12,6 +12,7 @@ export const CreateDiary = () => {
 
     function formValidation() {
         if (!title.trim() || !content.trim() || !date.trim()) {
+            document.querySelectorAll(".form").classList.add("form-danger");
             setError("Semua field harus diisi.");
             return false;
         }
@@ -37,10 +38,11 @@ export const CreateDiary = () => {
     }
     return (
         <div className="flex flex-col space-y-4 items-center text-center">
-            <input type="date" onChange={(e) => setDate(e.target.value)} className="w-72 text-center rounded-sm" />
-            <input type="text" onChange={(e) => setTitle(e.target.value)} placeholder="Ada apa hari ini?" className="text-center w-72 rounded-sm" />
-            <textarea onChange={(e) => setContent(e.target.value)} placeholder="Ceritakan Hari kamu disini" className="text-center w-72 h-32 items-center rounded-sm"></textarea>
-            <button onClick={handlerCreateEntry} className="btn py-3">Save Diary</button>
+            {error && <p className="text-red-500">{error}</p>}
+            <input type="date" onChange={(e) => setDate(e.target.value)} className="form" />
+            <input type="text" onChange={(e) => setTitle(e.target.value)} placeholder="Ada apa hari ini?" className="form" />
+            <textarea onChange={(e) => setContent(e.target.value)} placeholder="Ceritakan Hari kamu disini" className="form h-48 items-center"></textarea>
+            <button onClick={handlerCreateEntry} className="btn hover:bg-rose-600 py-3">Save Diary</button>
         </div>
     )
 }
