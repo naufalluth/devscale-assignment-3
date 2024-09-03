@@ -1,7 +1,7 @@
 async function getDiary() {
     try {
         const res = await fetch("https://v1.appbackend.io/v1/rows/XOKrMmLCjewE", {
-            cache: "no-store"
+            cache: "no-cache"
         });
         const data = await res.json();
         return data;
@@ -14,7 +14,7 @@ async function getDiary() {
 
 export const CardDiary = async () => {
     const { data } = await getDiary();
-    console.log({ data });
+
 
     return (
         <div className="grid grid-cols-3 gap-4 place-content-center">
