@@ -1,10 +1,9 @@
 
 import { CreateDiary } from "@/components/createDiaries";
-import { CardDiary } from "@/components/cardDiary"
 import { Header } from "@/components/header"
 
 
-export default function Diary() {
+export default function Page() {
 
 
     return (
