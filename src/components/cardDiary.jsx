@@ -17,7 +17,7 @@ export const CardDiary = async () => {
 
 
     return (
-        <div className="grid lg:grid-cols-3 gap-4 place-content-center md:grid-cols-2 md:gap-3 sm:grid-cols-1">
+        <div className="grid lg:grid-cols-3 gap-4 place-content-center md:grid-cols-2 md:gap-3 sm:grid-cols-1 py-4">
             {data.map((diary) => {
                 return (
                     <div key={diary._id} className="card space-y-4 p-3">
