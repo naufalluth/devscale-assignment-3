@@ -3,13 +3,18 @@
 @tailwind utilities;
 
 :root {
-  @apply w-full h-full bg-gradient-to-bl from-rose-400 from-10% via-rose-300 via-40% to-rose-200 bg-no-repeat;
+  @apply w-full h-screen bg-gradient-to-bl from-rose-400 from-10% via-rose-300 via-40% to-rose-200 bg-repeat;
 }
+h1 {
+  font-family: var(--font-pinyon);
+  font-size: 4rem;
+}
+
 @layer base {
 }
 @layer utilities {
   .title {
-    @apply text-5xl font-bold text-center text-white p-4 italic;
+    @apply text-center text-white py-7;
   }
   .card {
     @apply text-rose-700 p-3 rounded-lg w-72 bg-red-50;
@@ -21,7 +26,7 @@
     @apply hover:text-rose-500;
   }
   .form {
-    @apply w-[500px] text-center rounded-lg;
+    @apply w-[360px] md:w-[500px] lg:w-[550px] text-center rounded-lg;
   }
   .form-danger {
     @apply text-red-500 border border-red-500;

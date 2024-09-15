@@ -1,14 +1,13 @@
 
 import { CardDiary } from "@/components/cardDiary"
 import { Header } from "@/components/header"
+import { DiaryText } from "@/components/typedText"
 
 
 export default async function Diary() {
 
     return (
-        <div className="flex flex-col space-y-4 place-items-center h-[100vh]">
-            <Header />
-            <h1 className="title">Dear Diary</h1>
+        <div className="flex place-items-center">
             <CardDiary />
         </div>
     )
